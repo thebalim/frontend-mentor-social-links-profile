@@ -1,0 +1,154 @@
+:root {
+  --body-background: #141414;
+  --card-background: #1f1f1f;
+  --button-background: #333333;
+
+  --text-white: #ffffff;
+  --highlight-color: #c4f82a;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--body-background);
+  font-family: "Inter", sans-serif;
+  height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 327;
+  height: auto;
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  color: #ffffff;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  height: 88px;
+  width: 88px;
+  object-fit: cover;
+  opacity: 1;
+  margin: 0;
+}
+
+.card-content {
+  text-align: center;
+  margin: 24px 0;
+}
+
+.name {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  line-height: 150%;
+  font-size: 24px;
+}
+
+.address {
+  color: #c4f82a;
+  font-family: "Inter", sans-serif;
+  line-height: 150%;
+  font-weight: 400;
+  font-size: 14px;
+  font-style: bold;
+}
+
+.description {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn {
+  width: 279px;
+  height: auto;
+  background-color: var(--button-background);
+  padding: 12px;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: bold;
+  border: none;
+  color: var(--text-white);
+  transition: background-color 0.5s ease;
+}
+
+.btn:hover {
+  background-color: var(--highlight-color);
+  color: var(--card-background);
+}
+
+/* TABLET (min-wideth: 600px) */
+@media (min-width: 600px) {
+  body {
+    padding: 40px;
+  }
+
+  .card {
+    width: 456px;
+    height: auto;
+    padding: 40px;
+    width: 376px;
+    height: auto;
+  }
+
+  .card-actions {
+    gap: 16px;
+  }
+}
+
+@media (min-width: 950px) {
+  body {
+    padding: 0;
+  }
+
+  .card {
+    width: 384px;
+    height: auto;
+  }
+
+  .card-actions {
+    gap: 16px;
+  }
+  .btn {
+    width: 304px;
+  }
+}
